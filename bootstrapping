@@ -1,0 +1,42 @@
+*****************Bootstapping**************
+
+Note:-These all commands on workstation
+
+Step-1 create chef account login to manage.chef.io
+
+step-2 download winscp
+
+step-3 connect linux machine by winscp
+
+step-4 copy chef-repo folder to linux machine
+
+step-5 check in linux machine ls
+
+step-6 cd chef-repo/
+
+step-7 ls -a
+
+step-8 cd .chef/
+
+step-9 cat config.rb
+
+step-10 knife ssl check
+
+Note:- launch one more Amazon machine node-1
+
+Note:-node 1 key tranfer fo worksation chef repok folder 
+
+
+step-13- knife bootstrap 172.31.41.20 --ssh-user ec2-user --sudo -i node-key.pem -N node1
+
+step-14 Y
+
+step-15 knife node list 
+
+Go to manager.chef.io check in Nodes
+
+NOte:-Need to move cookbooks in chef-repo/cookbook
+
+Step-16 mv cookbooks/test-cookbook/ chef-repo/cookbooks/
+
+step-17 rm -rf cookbook/
